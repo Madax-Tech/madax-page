@@ -1,9 +1,13 @@
 import { render } from 'solid-js/web'
-import App from './App'
-import './index.css'
 import { Router } from '@solidjs/router'
-import Navbar from './components/templates/Navbar'
+import { lazy, Suspense } from 'solid-js'
 import type { Component, ParentProps } from 'solid-js'
+import Loading from './components/templates/Loading'
+import './index.css'
+
+const Navbar: Component = lazy(() => import('./components/templates/Navbar'))
+const App: Component = lazy(() => import('./App'))
+// const Footer: Component = lazy(() => import('./components/templates/Footer'))
 
 const Layout: Component<ParentProps> = ({ children }) => {
     return (
@@ -17,8 +21,10 @@ const Layout: Component<ParentProps> = ({ children }) => {
 
 render(() => {
     return (
-        <Router root={Layout}>
-            <App />
-        </Router>
+        <Suspense fallback={<Loading />}>
+            <Router root={Layout}>
+                <App />
+            </Router>
+        </Suspense>
     )
 }, document.getElementById('root')!)
