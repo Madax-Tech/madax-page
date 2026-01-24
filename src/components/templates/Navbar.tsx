@@ -16,7 +16,7 @@ const Desktop = styled("nav")`
     justify-content: space-around;
     padding: 0 20px;
     gap: 10px;
-    border-bottom: 1px solid var(--color3);
+    border-bottom: 1px solid var(--color1);
 `
 const DesktopBox = styled("div")`
     width: 33.33%;
@@ -50,7 +50,7 @@ const Mobile = styled("nav")`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color3);
+    border-bottom: 1px solid var(--color1);
 `
 const MobileBox = styled("div")`
     width: 100%;
