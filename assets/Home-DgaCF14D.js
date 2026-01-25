@@ -1,4 +1,4 @@
-import{c as e,s as a,G as s}from"./index-Bg1uWFPb.js";const r=a("div")`
+import{c as e,s as a,G as s}from"./index-CjgUKMd_.js";const r=a("div")`
     ${s};
     padding: clamp(20px, 4vw, 40px);
     margin: 20px;
