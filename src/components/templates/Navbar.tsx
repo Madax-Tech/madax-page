@@ -8,7 +8,9 @@ import Anchor from "../atoms/Anchor"
 //#region Desktop
 const Desktop = styled("nav")`
     ${Glass};
-    position: relative;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
     width: 100%;
     height: 60px;
     display: flex;
@@ -17,6 +19,7 @@ const Desktop = styled("nav")`
     padding: 0 20px;
     gap: 10px;
     border-bottom: 1px solid var(--color1);
+    z-index: 10;
 `
 const DesktopBox = styled("div")`
     width: 33.33%;
@@ -42,7 +45,6 @@ const DesktopItem = styled(Anchor)`
 //#region Mobile
 const Mobile = styled("nav")`
     ${Glass};
-    position: relative;
     padding: 0 20px;
     width: 100%;
     height: auto;
@@ -51,6 +53,7 @@ const Mobile = styled("nav")`
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--color1);
+    z-index: 10;
 `
 const MobileBox = styled("div")`
     width: 100%;

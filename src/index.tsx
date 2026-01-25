@@ -13,7 +13,7 @@ const Footer: Component = lazy(() => import('./components/templates/Footer'))
 
 const Page = styled('div')`
     width: 100%;
-    height: calc(100dvh - 60px);
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,27 +40,13 @@ const Page = styled('div')`
     }
 `
 
-const Body = styled('main')`
-    ${Glass};
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 20px;
-    padding: 20px;
-`
-
 render(() => {
     return (
         <Suspense fallback={<Loading />}>
             <Background >
-                <Navbar />
                 <Page>
-                    <Body>
-                        <App />
-                    </Body>
+                    <Navbar />
+                    <App />
                     <Footer />
                 </Page>
             </Background>

@@ -5,7 +5,7 @@ import { Glass } from "@/styles/Glass"
 
 const Container = styled("footer")`
     ${Glass};
-    position: relative;
+    border-top: 1px solid var(--color1);
     width: 100%;
     height: 100px;
     display: flex;
@@ -14,6 +14,9 @@ const Container = styled("footer")`
     justify-content: center;
     gap: 10px;
     padding: 10px 20px;
+    bottom: 0;
+    flex-shrink: 0;
+    z-index: 10;
 `
 
 const Row = styled("div")`
