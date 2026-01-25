@@ -3,10 +3,11 @@ import { defineConfig } from 'vite'
 import solid from 'vite-plugin-solid'
 
 export default defineConfig({
+    base: "/madax-page/",
     plugins: [solid()],
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
         },
-    },
+    }
 })
