@@ -1,0 +1,17 @@
+services:
+  madax-page:
+    container_name: madax-page
+    build:
+      context: .
+      dockerfile: dockerfile
+    networks:
+      - proxy_network
+    ports:
+      - "5001:8080"
+    restart: unless-stopped
+    mem_limit: 100m
+    cpus: 0.5
+
+networks:
+  proxy_network:
+    external: true
