@@ -4,7 +4,6 @@ import { For, type Component } from "solid-js";
 import Glass from "@/styles/Glass";
 import img3 from "@/assets/images/img3.jpg";
 import img4 from "@/assets/images/img4.jpg";
-import img5 from "@/assets/images/img5.jpg";
 
 type Project = {
     id: number;
@@ -17,24 +16,17 @@ type Project = {
 const projects: Project[] = [
     {
         id: 1,
-        title: "Madax Dashboard",
+        title: "Daily Words",
         image: img3,
-        tech: ["TypeScript", "React", "Nestjs"],
-        description: "Painel administrativo com gráficos em tempo real, autenticação e gerenciamento de usuários.",
+        tech: ["React", "Expressjs", "Golang"],
+        description: "Uma aplicação que envia palavras diárias para os usuários, versos bíblicos, autoajuda, dicas de bem-estar e motivação.",
     },
     {
         id: 2,
-        title: "Loja Virtual",
+        title: "Checklist",
         image: img4,
-        tech: ["Solid Start", "Stripe", "Prisma"],
-        description: "E-commerce com checkout integrado, catálogo dinâmico e painel de pedidos.",
-    },
-    {
-        id: 3,
-        title: "App Mobile",
-        image: img5,
-        tech: ["Ionic", "GraphQL", "Expo"],
-        description: "Aplicativo móvel multiplataforma com sync offline e notificações push.",
+        tech: ["React", "Django", "AWS EC2"],
+        description: "Um Projeto para gerenciamento de tempo inteligente, com uma dashboard integrada"
     }
 ];
 
@@ -82,7 +74,7 @@ const Content = styled("div")`
     gap: 8px;
 
     h2 { margin: 0; font-size: 1.125rem; }
-    p { margin: 0; color: #374151; font-size: 0.95rem; }
+    p { margin: 0; color: var(--color7); font-size: 0.95rem; font-weight: 300; line-height: 1.4; }
 `;
 
 const TechList = styled("ul")`

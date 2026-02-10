@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import { styled } from "solid-styled-components";
+import { BsGithub, BsLinkedin } from "solid-icons/bs";
 
 import Glass from "@/styles/Glass";
 import img1 from "@/assets/images/img1.jpg"
@@ -22,7 +23,7 @@ const Row = styled("section")`
     }
 `;
 
-const Block = styled("a")`
+const Block = styled("div")`
     flex: 1;
     ${Glass};
     border: 1px solid var(--color8);
@@ -36,12 +37,6 @@ const Block = styled("a")`
     color: inherit;
 
     transition: transform .15s ease, box-shadow .15s ease;
-
-    &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        cursor: pointer;
-    }
 `;
 
 const Meta = styled("div")`
@@ -106,11 +101,33 @@ const Tech = styled("li")`
     font-size: clamp(12px, 5vw, 16px);
 `;
 
+const SocialLinks = styled("div")`
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px solid var(--color8);
+`;
+
+const SocialIcon = styled("a")`
+    color: var(--color5);
+    font-size: 24px;
+    transition: color .2s ease, transform .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+        color: var(--color3);
+        transform: scale(1.15);
+    }
+`;
+
 const AboutPage: Component<{ id: string }> = (props) => {
     return (
         <Page id={props.id}>
             <Row>
-                <Block href="https://github.com/Zelchi" target="_blank">
+                <Block>
                     <Meta>
                         <Avatar src={img1} alt="Dev 1" />
                         <Header>
@@ -129,9 +146,17 @@ const AboutPage: Component<{ id: string }> = (props) => {
                         <Tech>Docker</Tech>
                         <Tech>Golang</Tech>
                     </TechList>
+                    <SocialLinks>
+                        <SocialIcon href="https://github.com/Zelchi" target="_blank">
+                            <BsGithub size={30} />
+                        </SocialIcon>
+                        <SocialIcon href="https://linkedin.com/in/davi-lima" target="_blank">
+                            <BsLinkedin size={30} />
+                        </SocialIcon>
+                    </SocialLinks>
                 </Block>
 
-                <Block href="https://github.com/Marcosdev03" target="_blank">
+                <Block>
                     <Meta>
                         <Avatar src={img2} alt="Dev 2" />
                         <Header>
@@ -151,6 +176,14 @@ const AboutPage: Component<{ id: string }> = (props) => {
                         <Tech>S3</Tech>
                         <Tech>Linux</Tech>
                     </TechList>
+                    <SocialLinks>
+                        <SocialIcon href="https://github.com/Marcosdev03" target="_blank">
+                            <BsGithub size={30} />
+                        </SocialIcon>
+                        <SocialIcon href="https://linkedin.com/in/marcos-paulo" target="_blank">
+                            <BsLinkedin size={30} />
+                        </SocialIcon>
+                    </SocialLinks>
                 </Block>
             </Row>
         </Page>
