@@ -1,4 +1,4 @@
-import{C as o,F as t,a as n,b as a}from"./Contact-CGQORP4l.js";import{c as e,s as r,G as s}from"./index-D5m__NuO.js";const c=r("footer")`
+import{C as e,F as t,a as n,b as a}from"./Contact-8MfWFSPn.js";import{c as o,s as r,G as s}from"./index-BsjldD8i.js";import"./index-BoabWN6a.js";const c=r("footer")`
     ${s};
     border-top: 1px solid var(--color8);
     width: 100%;
@@ -21,4 +21,4 @@ import{C as o,F as t,a as n,b as a}from"./Contact-CGQORP4l.js";import{c as e,s a
 `,l=r("p")`
     font-size: clamp(15px, 5vw, 30px);
     color: var(--color5);
-`,x=()=>e(c,{get children(){return[e(i,{get children(){return[e(o,{size:40,color:"var(--color5)",component:t}),e(o,{size:40,color:"var(--color5)",component:n}),e(o,{size:40,color:"var(--color5)",component:a})]}}),e(l,{children:"© 2026 Madax Tech LTDA."})]}});export{x as default};
+`,m=()=>o(c,{get children(){return[o(i,{get children(){return[o(e,{size:40,color:"var(--color5)",component:t}),o(e,{size:40,color:"var(--color5)",component:n}),o(e,{size:40,color:"var(--color5)",component:a})]}}),o(l,{children:"© 2026 Madax Tech LTDA."})]}});export{m as default};
