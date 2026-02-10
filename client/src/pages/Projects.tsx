@@ -3,6 +3,7 @@ import { For, type Component } from "solid-js";
 
 import Glass from "@/styles/Glass";
 import img3 from "@/assets/images/img3.jpg";
+import img4 from "@/assets/images/img4.jpg";
 
 type Project = {
     id: number;
@@ -19,6 +20,13 @@ const projects: Project[] = [
         image: img3,
         tech: ["React", "Expressjs", "Golang"],
         description: "Uma aplicação que envia palavras diárias para os usuários, versos bíblicos, autoajuda, dicas de bem-estar e motivação.",
+    },
+    {
+        id: 2,
+        title: "Checklist",
+        image: img4,
+        tech: ["React", "Django", "AWS EC2"],
+        description: "Um Projeto para gerenciamento de tempo inteligente, com uma dashboard integrada"
     }
 ];
 
