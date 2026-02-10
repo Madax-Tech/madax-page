@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 	"server/routes"
 
 	"github.com/gin-contrib/cors"
@@ -9,10 +10,17 @@ import (
 )
 
 func main() {
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	r := gin.Default()
 	r.Use(cors.Default())
 	routes.SetupRoutes(r)
 
-	log.Printf("Iniciando servidor HTTP na porta %s", "8080")
-	r.Run(":" + "8080")
+	log.Printf("Iniciando servidor HTTP na porta %s", port)
+	r.Run(":" + port)
+
 }
