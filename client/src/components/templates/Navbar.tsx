@@ -136,6 +136,7 @@ const MobileContact = styled("div")`
     margin-top: 10px;
     margin-bottom: 10px;
 `
+
 //#endregion
 //#region Common
 const IconsGroup = styled("div")`
@@ -210,9 +211,9 @@ const Navbar: Component = () => {
                     </DesktopBox>
                     <DesktopBox>
                         <IconsGroup>
-                            <Contact size={40} color="var(--color5)" component={FaBrandsSquareWhatsapp} />
-                            <Contact size={40} color="var(--color5)" component={FaBrandsSquareLinkedin} />
-                            <Contact size={40} color="var(--color5)" component={FaBrandsSquareInstagram} />
+                            <Contact size={40} color="var(--color5)" url="" component={FaBrandsSquareWhatsapp} />
+                            <Contact size={40} color="var(--color5)" url="https://www.linkedin.com/company/madax-tech-ltda" component={FaBrandsSquareLinkedin} />
+                            <Contact size={40} color="var(--color5)" url="" component={FaBrandsSquareInstagram} />
                         </IconsGroup>
                     </DesktopBox>
                 </Desktop>
@@ -233,9 +234,9 @@ const Navbar: Component = () => {
                             <MobileItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("about") }}>Sobre</MobileItem>
                             <MobileContact>
                                 <IconsGroup>
-                                    <Contact size={35} color="var(--color5)" component={FaBrandsSquareWhatsapp} />
-                                    <Contact size={35} color="var(--color5)" component={FaBrandsSquareLinkedin} />
-                                    <Contact size={35} color="var(--color5)" component={FaBrandsSquareInstagram} />
+                                    <Contact size={35} color="var(--color5)" url="" component={FaBrandsSquareWhatsapp} />
+                                    <Contact size={35} color="var(--color5)" url="https://www.linkedin.com/company/madax-tech-ltda" component={FaBrandsSquareLinkedin} />
+                                    <Contact size={35} color="var(--color5)" url="" component={FaBrandsSquareInstagram} />
                                 </IconsGroup>
                             </MobileContact>
                         </MobileMenu>

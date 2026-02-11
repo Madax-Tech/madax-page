@@ -4,10 +4,11 @@ import type { Component } from "solid-js"
 interface IconsProps {
     size: number
     color: string
+    url: string
     component: Component<any>
 }
 
-const Icon = styled("div")`
+const Icon = styled("a")`
     transition: all 0.2s;
     cursor: pointer;
     display: flex;
@@ -20,10 +21,10 @@ const Icon = styled("div")`
     }
 `
 
-const Contact: Component<IconsProps> = ({ size, color, component }) => {
+const Contact: Component<IconsProps> = ({ size, color, url, component }) => {
     const Component = component
     return (
-        <Icon>
+        <Icon href={url} target="_blank" rel="noopener noreferrer">
             <Component style={{ width: `${size}px`, height: `${size}px`, color }} />
         </Icon>
     )

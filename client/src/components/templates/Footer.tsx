@@ -37,9 +37,9 @@ export default () => {
     return (
         <Container>
             <Row>
-                <Contact size={40} color="var(--color5)" component={FaBrandsSquareWhatsapp} />
-                <Contact size={40} color="var(--color5)" component={FaBrandsSquareLinkedin} />
-                <Contact size={40} color="var(--color5)" component={FaBrandsSquareInstagram} />
+                <Contact size={40} color="var(--color5)" url="" component={FaBrandsSquareWhatsapp} />
+                <Contact size={40} color="var(--color5)" url="https://www.linkedin.com/company/madax-tech-ltda" component={FaBrandsSquareLinkedin} />
+                <Contact size={40} color="var(--color5)" url="" component={FaBrandsSquareInstagram} />
             </Row>
             <Text>© 2026 Madax Tech LTDA.</Text>
         </Container>
