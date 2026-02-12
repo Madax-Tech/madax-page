@@ -208,6 +208,7 @@ const Navbar: Component = () => {
                         <DesktopItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("home") }}>Inicio</DesktopItem>
                         <DesktopItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("projects") }}>Projetos</DesktopItem>
                         <DesktopItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("about") }}>Sobre</DesktopItem>
+                        <DesktopItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("lead") }}>Contato</DesktopItem>
                     </DesktopBox>
                     <DesktopBox>
                         <IconsGroup>
@@ -232,6 +233,7 @@ const Navbar: Component = () => {
                             <MobileItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("home") }}>Inicio</MobileItem>
                             <MobileItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("projects") }}>Projetos</MobileItem>
                             <MobileItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("about") }}>Sobre</MobileItem>
+                            <MobileItem onClick={(e: MouseEvent) => { e.preventDefault(); scrollToSection("lead") }}>Contato</MobileItem>
                             <MobileContact>
                                 <IconsGroup>
                                     <Contact size={35} color="var(--color5)" url="" component={FaBrandsSquareWhatsapp} />
