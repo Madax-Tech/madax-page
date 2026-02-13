@@ -28,12 +28,11 @@ const Title = styled.h1`
 const Box = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 
     gap: 30px;
-    width: 100%;
-    height: auto;
+    width: 90%;
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -42,10 +41,12 @@ const Box = styled.div`
 
 const Label = styled.div`
     gap: 10px;
+    width: 100%;
 `
 
 const Text = styled.p`
     margin-bottom: 10px;
+    width: 100%;
 `
 
 const Input = styled.input`
@@ -57,6 +58,7 @@ const Input = styled.input`
     border-radius: 10px;
     padding-left: 10px;
     padding-left: 10px;
+    width: 100%;
 
     &:focus {
         filter: brightness(2);
@@ -68,7 +70,7 @@ const Input = styled.input`
 const Description = styled.textarea`
     ${Glass};
     resize: none;
-    width: 100%;
+    width: 90%;
     height: 200px;
     padding: 10px;
     border: 1px solid var(--color8);
