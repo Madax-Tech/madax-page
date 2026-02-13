@@ -1,9 +1,7 @@
 import { styled } from "solid-styled-components";
 import { For, type Component } from "solid-js";
 import Project from "@/components/atoms/Project";
-
-import img3 from "@/assets/projects/daily_words_cover.png";
-import img4 from "@/assets/projects/checklist_cover.png";
+import projectsData from "@/data/projects.json";
 
 type Project = {
     id: number;
@@ -12,23 +10,6 @@ type Project = {
     tech: string[];
     description: string;
 };
-
-const projects: Project[] = [
-    {
-        id: 1,
-        title: "Daily Words",
-        image: img3,
-        tech: ["React", "Expressjs", "Golang"],
-        description: "Uma aplicação que envia palavras diárias para os usuários, versos bíblicos, autoajuda, dicas de bem-estar e motivação.",
-    },
-    {
-        id: 2,
-        title: "Checklist",
-        image: img4,
-        tech: ["React", "Django", "AWS EC2"],
-        description: "Um Projeto para gerenciamento de tempo inteligente, com uma dashboard integrada"
-    }
-];
 
 const Grid = styled("section")`
     display: grid;
@@ -40,7 +21,7 @@ const Grid = styled("section")`
 const ProjectsPage: Component<{ id: string }> = (props) => {
     return (
         <Grid id={props.id}>
-            <For each={projects}>
+            <For each={projectsData}>
                 {(p) => (
                     <Project {...p} />
                 )}

@@ -41,21 +41,6 @@ const Content = styled("div")`
     p { margin: 0; color: var(--color7); font-size: 0.95rem; font-weight: 300; line-height: 1.4; }
 `;
 
-const TechList = styled("ul")`
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 0;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-`;
-
-const Tech = styled("li")`
-    padding: 4px 8px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-`;
-
 type PropProject = {
     id: number,
     title: string,

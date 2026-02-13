@@ -30,6 +30,6 @@ FROM alpine:latest
 WORKDIR /app
 
 COPY --from=server-builder --chmod=755 /server/main /app/main
-COPY --from=client-builder --chmod=755 /client/dist /app/static
+COPY --from=client-builder --chmod=755 /client/dist /app/dist
 
 CMD ["/app/main"]
