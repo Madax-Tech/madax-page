@@ -3,8 +3,8 @@ import { styled } from "solid-styled-components";
 import { BsGithub, BsLinkedin } from "solid-icons/bs";
 
 import Glass from "@/styles/Glass";
-import img1 from "@/assets/images/img1.jpg"
-import img2 from "@/assets/images/img2.jpg"
+import img1 from "@/assets/avatar/davi.jpg"
+import img2 from "@/assets/avatar/marcos.jpg"
 
 const Page = styled("section")`
     padding: 24px;

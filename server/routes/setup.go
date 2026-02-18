@@ -1,37 +1,33 @@
 package routes
 
 import (
-	"os"
+	"net/http"
 	"path/filepath"
 	"strings"
-
-	"github.com/gin-gonic/gin"
 )
 
-func SetupRoutes(r *gin.Engine) *gin.Engine {
-
-	staticPath := "./static"
-	if envPath := os.Getenv("STATIC_PATH"); envPath != "" {
-		staticPath = envPath
+func serveFile(staticPath, fileName string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(staticPath, fileName))
 	}
+}
 
-	r.Static("/assets", filepath.Join(staticPath, "assets"))
+func SetupRoutes() {
+	staticPath := "./dist"
 
-	r.StaticFile("/favicon.png", filepath.Join(staticPath, "favicon.png"))
-	r.StaticFile("/ads.txt", filepath.Join(staticPath, "ads.txt"))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir(filepath.Join(staticPath, "assets")))))
+	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(filepath.Join(staticPath, "images")))))
 
-	r.NoRoute(func(ctx *gin.Context) {
-		if strings.HasPrefix(ctx.Request.URL.Path, "/api") {
-			ctx.JSON(404, gin.H{"error": "Route not found"})
+	http.HandleFunc("/favicon.png", serveFile(staticPath, "favicon.png"))
+	http.HandleFunc("/ads.txt", serveFile(staticPath, "ads.txt"))
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if strings.HasPrefix(r.URL.Path, "/api") {
+			w.WriteHeader(http.StatusNotFound)
+			w.Header().Set("Content-Type", "application/json")
+			w.Write([]byte(`{"error":"Route not found"}`))
 			return
 		}
-
-		ctx.File(filepath.Join(staticPath, "index.html"))
+		http.ServeFile(w, r, filepath.Join(staticPath, "index.html"))
 	})
-
-	r.GET("/", func(ctx *gin.Context) {
-		ctx.File(filepath.Join(staticPath, "index.html"))
-	})
-
-	return r
 }

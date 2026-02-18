@@ -1,9 +1,10 @@
 import { styled } from "solid-styled-components"
 import { lazy } from "solid-js"
 
-const HomePage = lazy(() => import("@/pages/Home"))
-const AboutPage = lazy(() => import("@/pages/About"))
-const ProjectsPage = lazy(() => import("@/pages/Projects"))
+const Home = lazy(() => import("@/sections/Home"))
+const About = lazy(() => import("@/sections/About"))
+const Projects = lazy(() => import("@/sections/Projects"))
+const Lead = lazy(() => import("@/sections/Lead"))
 
 const Body = styled('main')`
     flex: 1;
@@ -21,9 +22,10 @@ const Body = styled('main')`
 const App = () => {
     return (
         <Body>
-            <HomePage id="home" />
-            <ProjectsPage id="projects" />
-            <AboutPage id="about" />
+            <Home id="home" />
+            <Projects id="projects" />
+            <About id="about" />
+            <Lead id="lead" />
         </Body >
     )
 }

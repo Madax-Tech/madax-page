@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Daily Words",
+        "image": "images/daily_words_cover.png",
+        "tech": [
+            "React",
+            "Expressjs",
+            "Golang"
+        ],
+        "description": "Uma aplicação que envia palavras diárias para os usuários, versos bíblicos, autoajuda, dicas de bem-estar e motivação."
+    },
+    {
+        "id": 2,
+        "title": "Checklist",
+        "image": "images/checklist_cover.png",
+        "tech": [
+            "React",
+            "Django",
+            "AWS EC2"
+        ],
+        "description": "Um Projeto para gerenciamento de tempo inteligente, com uma dashboard integrada"
+    }
+]
