@@ -21,10 +21,12 @@ func SetupRoutes() {
 	http.HandleFunc("/favicon.png", serveFile(staticPath, "favicon.png"))
 	http.HandleFunc("/ads.txt", serveFile(staticPath, "ads.txt"))
 
+	http.HandleFunc("/api/lead", LeadHandler)
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if strings.HasPrefix(r.URL.Path, "/api") {
-			w.WriteHeader(http.StatusNotFound)
 			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusNotFound)
 			w.Write([]byte(`{"error":"Route not found"}`))
 			return
 		}
