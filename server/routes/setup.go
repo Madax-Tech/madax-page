@@ -19,7 +19,6 @@ func SetupRoutes() {
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(filepath.Join(staticPath, "images")))))
 
 	http.HandleFunc("/favicon.png", serveFile(staticPath, "favicon.png"))
-	http.HandleFunc("/ads.txt", serveFile(staticPath, "ads.txt"))
 
 	http.HandleFunc("/api/lead", LeadHandler)
 
